@@ -1,0 +1,7 @@
+/*Text*/
+.text {
+  @include font(16px, 400, 1.87);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}

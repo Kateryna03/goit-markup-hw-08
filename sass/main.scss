@@ -1,0 +1,24 @@
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+@import "./utils/mixins";
+
+@import "./base/common";
+@import "./base/container";
+@import "./base/fonts";
+
+@import "./components/logo";
+@import "./components/section-title";
+@import "./components/modal-button";
+@import "./components/text";
+@import "./components/social-list-links";
+
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/hero";
+@import "./layout/modal-form";
+@import "./layout/checkbox";
+@import "./layout/advantages";
+@import "./layout/capabilities";
+@import "./layout/team";
+@import "./layout/regular-customers";
+@import "./layout/footer";

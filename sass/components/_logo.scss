@@ -1,0 +1,33 @@
+/*Logo*/
+.logo {
+  @include font(26px, 700, 1.2);
+  display: block;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  color: var(--primary-dark-color);
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  letter-spacing: 0.03em;
+
+  &:hover {
+    color: var(--primary-dark-color);
+  }
+}
+
+.logo-accent {
+  color: var(--accent-color);
+}
+.footer-logo {
+  @include font(26px, 700, 1.2);
+  color: var(--primary-lite-color);
+  font-family: Raleway;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  display: block;
+  margin-bottom: 20px;
+
+  &:focus {
+    color: var(--primary-lite-color);
+  }
+}

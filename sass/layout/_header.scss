@@ -1,117 +1,158 @@
 /*HEADER*/
+
+/*MOBILE FIRST*/
 .page-header {
-  /*position: fixed; ДЕЛАЕТ ФИКСИРОВАН ХЭДЕР*/
-  min-height: 80px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--primary-lite-color);
-  border-bottom: 1px solid #ececec;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: powderblue;
 }
 
-.main-nav {
-  display: flex;
-  height: 80px;
-  text-align: center;
+@media skreen and (max-width: 767px) {
 }
 
-/*Adress*/
-.contacts {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
+/*tablet*/
 
-.contacts-item {
-  display: flex;
-  text-align: center;
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
-.link {
-  .contacts & {
-    @include font(14px, 500, 1.14);
-    color: var(--primary-text-color);
-    letter-spacing: 0.02em;
+@media skreen and (min-width: 768px) {
+  .page-header {
+    /*position: fixed; ДЕЛАЕТ ФИКСИРОВАН ХЭДЕР*/
+    padding-top: 26px;
+    padding-bottom: 26px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-lite-color);
+    border-bottom: 1px solid #ececec;
+    position: relative;
   }
 
-  &:hover,
-  &:focus {
+  .logo {
+    @include font(24px, 700, 1.2);
+    display: block;
+    color: var(--primary-dark-color);
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    margin-right: 88px;
+    text-align: center;
+    align-items: center;
+
+    &:hover {
+      color: var(--primary-dark-color);
+    }
+  }
+
+  .logo-accent {
     color: var(--accent-color);
-    cursor: pointer;
+  }
+}
+@media skreen and (max-width: 1990px) {
+}
+
+/*desktop*/
+
+@media skreen and (min-width: 1200px) {
+  .page-header {
+    /*position: fixed; ДЕЛАЕТ ФИКСИРОВАН ХЭДЕР*/
+    min-height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-lite-color);
+    border-bottom: 1px solid #ececec;
+    position: relative;
+  }
+  .main-nav {
+    display: flex;
+    height: 80px;
+    text-align: center;
   }
 
-  .site-nav & {
-    @include font(14px, 400, 1.14);
-    color: var(--title-text-color);
-    letter-spacing: 0.02em;
+  /*Adress*/
+
+  .contacts {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .contacts-item {
+    display: flex;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .link {
+    .contacts & {
+      @include font(14px, 500, 1.14);
+      color: var(--primary-text-color);
+      letter-spacing: 0.02em;
+    }
 
     &:hover,
     &:focus {
       color: var(--accent-color);
+      cursor: pointer;
+    }
+
+    .site-nav & {
+      @include font(14px, 400, 1.14);
+      color: var(--title-text-color);
+      letter-spacing: 0.02em;
+
+      &:hover,
+      &:focus {
+        color: var(--accent-color);
+      }
     }
   }
-}
 
-.link-current {
-  display: block;
-  text-decoration: none;
-  color: currentColor;
-  position: relative;
-
-  &::after {
-    content: "";
+  .link-current {
     display: block;
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    left: 0;
-    bottom: -1px;
+    text-decoration: none;
+    color: currentColor;
+    position: relative;
 
-    background: #2196f3;
-    border-radius: 2px;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      left: 0;
+      bottom: -1px;
+
+      background: #2196f3;
+      border-radius: 2px;
+    }
   }
-}
 
-.header-icon {
-  display: flex;
-  fill: currentColor;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  background-size: contain;
-}
+  .header-icon {
+    display: flex;
+    fill: currentColor;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    background-size: contain;
+  }
 
-.mail-link {
-  display: flex;
-  height: 100%;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
+  .mail-link {
+    display: flex;
+    height: 100%;
     cursor: pointer;
-  }
+    justify-content: center;
+    align-items: center;
 
-  .contacts-item & {
-    margin-left: auto;
-  }
-}
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      cursor: pointer;
+    }
 
-.link-tel {
-  display: flex;
-  height: 100%;
-  cursor: pointer;
-  align-items: center;
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-    cursor: pointer;
+    .contacts-item & {
+      margin-left: auto;
+    }
   }
 }

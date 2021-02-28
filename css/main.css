@@ -98,6 +98,11 @@ a {
   justify-content: space-between;
 }
 
+.hero .container {
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -638,12 +643,81 @@ a {
 }
 
 /*hero*/
-.overlay {
+/*@media not all,
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/mobile-images/hero/hero@2x.jpg);
+  }
+}*/
+.title {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.62;
+  color: var(--primary-lite-color);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+  background-color: var(--background-hero-color);
+}
+
+.hero-title {
+  width: 360px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
+  .hero-title {
+    width: 696px;
+    margin: 0 auto;
+  }
+  .overlay {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    background-color: var(--background-hero-color);
+  }
+}
+
+/*.overlay {
   height: 600px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-hero.jpg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Img-hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -653,13 +727,12 @@ a {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+
   background-color: var(--background-hero-color);
 }
 
 .title {
-  font-size: 44px;
-  font-weight: 900;
-  line-height: 1.36;
+  @include font(44px, 900, 1.36);
   color: var(--primary-lite-color);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -669,8 +742,7 @@ a {
 .hero-title {
   width: 696px;
   margin: 0 auto;
-}
-
+}*/
 /*МОДАЛЬНОЕ ОКНО*/
 .backdrop {
   position: fixed;
@@ -995,6 +1067,19 @@ a {
   .section-title-list {
     display: flex;
     flex-wrap: wrap;
+  }
+  .section-title-li {
+    max-width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .section-title-li {
+    width: 270px;
   }
 }
 

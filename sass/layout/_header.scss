@@ -5,38 +5,20 @@
   background-color: powderblue;
 }
 
-@media skreen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
 }
 
 /*tablet*/
 
-@media skreen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .page-header {
     /*position: fixed; ДЕЛАЕТ ФИКСИРОВАН ХЭДЕР*/
-    padding-top: 26px;
-    padding-bottom: 26px;
     width: 100%;
     top: 0;
     left: 0;
     background-color: var(--primary-lite-color);
     border-bottom: 1px solid #ececec;
     position: relative;
-  }
-
-  .logo {
-    @include font(24px, 700, 1.2);
-    display: block;
-    color: var(--primary-dark-color);
-    font-family: Raleway, sans-serif;
-    font-style: normal;
-    letter-spacing: 0.03em;
-    margin-right: 88px;
-    text-align: center;
-    align-items: center;
-
-    &:hover {
-      color: var(--primary-dark-color);
-    }
   }
 
   .logo-accent {
@@ -46,10 +28,10 @@
 
 /*desktop*/
 
-@media skreen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .page-header {
     /*position: fixed; ДЕЛАЕТ ФИКСИРОВАН ХЭДЕР*/
-    min-height: 80px;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
@@ -68,7 +50,9 @@
   .contacts {
     margin-left: auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    text-align: center;
   }
 
   .contacts-item {

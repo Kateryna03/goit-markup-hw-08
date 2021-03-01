@@ -209,11 +209,24 @@ a {
   /* Legacy iOS */
 }
 
-.logo {
-  font-size: 24px;
-  align-items: center;
-  padding: 16px 0;
-  display: inline-block;
+@media skreen and (max-width: 767px) {
+  .logo {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.16;
+    align-items: center;
+    padding: 16px 0;
+    display: block;
+    font-family: "Raleway", sans-serif;
+    color: #212121;
+  }
+  .logo:hover {
+    color: var(--primary-dark-color);
+  }
+}
+
+.logo-accent {
+  color: var(--accent-color);
 }
 
 .footer-logo {
@@ -242,14 +255,22 @@ a {
 @media skreen and (min-width: 768px) {
   .logo {
     font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    align-items: center;
+    padding: 26px 0;
+    display: block;
+    font-family: "Raleway", sans-serif;
+    color: #212121;
     text-align: center;
   }
-  .logo:hover {
+  :hover {
     color: var(--primary-dark-color);
   }
-  .logo-accent {
-    color: var(--accent-color);
-  }
+}
+
+.logo-accent {
+  color: var(--accent-color);
 }
 
 /*.logo {
@@ -308,19 +329,20 @@ a {
 
 /*FILTER-BUTTONS*/
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .button-flex {
   display: flex;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 40px;
 }
 
 .button-list-item:not(:last-child) {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .portfolio-button {
@@ -349,6 +371,67 @@ a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media screen and (min-width: 768px) {
+  .button-flex {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+/*FILTER-BUTTONS*/
+/*.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.button-flex {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.button-list-item {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.portfolio-button {
+  @include font(16px, 500, 1.6);
+  color: var(--title-text-color);
+  background-color: var(--background-team-color);
+
+  font-family: inherit;
+  letter-spacing: 0.03em;
+
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 6px 22px;
+  white-space: nowrap;
+  border-color: transparent;
+  border: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--primary-lite-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+    border: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}*/
 /*CARD-SET*/
 .portfolio-img-flex {
   display: flex;
@@ -539,11 +622,9 @@ a {
 }
 
 /*tablet*/
-@media skreen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .page-header {
     /*position: fixed; ДЕЛАЕТ ФИКСИРОВАН ХЭДЕР*/
-    padding-top: 26px;
-    padding-bottom: 26px;
     width: 100%;
     top: 0;
     left: 0;
@@ -551,32 +632,16 @@ a {
     border-bottom: 1px solid #ececec;
     position: relative;
   }
-  .logo {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1.2;
-    display: block;
-    color: var(--primary-dark-color);
-    font-family: Raleway, sans-serif;
-    font-style: normal;
-    letter-spacing: 0.03em;
-    margin-right: 88px;
-    text-align: center;
-    align-items: center;
-  }
-  .logo:hover {
-    color: var(--primary-dark-color);
-  }
   .logo-accent {
     color: var(--accent-color);
   }
 }
 
 /*desktop*/
-@media skreen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .page-header {
     /*position: fixed; ДЕЛАЕТ ФИКСИРОВАН ХЭДЕР*/
-    min-height: 80px;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
@@ -593,7 +658,9 @@ a {
   .contacts {
     margin-left: auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    text-align: center;
   }
   .contacts-item {
     display: flex;
@@ -666,6 +733,20 @@ a {
 
 /*Site nav*/
 /*MOBILE FIRST*/
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  display: block;
+  color: var(--primary-dark-color);
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  text-align: center;
+  align-items: center;
+  padding: 16px 0;
+}
+
 .burger-btn,
 .mobile-close-btn {
   background-color: transparent;
@@ -842,12 +923,28 @@ a {
     height: 100%;
     cursor: pointer;
     align-items: center;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: #757575;
   }
   .link-tel:hover, .link-tel:focus {
     color: var(--accent-color);
     cursor: pointer;
   }
+  .link-header {
+    display: block;
+    color: #212121;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
   .link-current {
+    padding: 32px 0;
     display: block;
     text-decoration: none;
     color: var(--accent-color);
@@ -879,6 +976,12 @@ a {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: #757575;
   }
   .mail-link:hover, .mail-link:focus {
     color: var(--accent-color);
@@ -886,6 +989,53 @@ a {
   }
   .contacts-item {
     margin-left: auto;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    display: block;
+    color: var(--primary-dark-color);
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    text-align: center;
+    align-items: center;
+    padding: 26px 0;
+  }
+  .logo:hover {
+    color: var(--primary-dark-color);
+  }
+  .site-nav {
+    display: flex;
+    width: 294px;
+    text-align: center;
+    align-items: center;
+  }
+  .site-nav-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .link-current,
+  .logo-accent {
+    color: var(--accent-color);
+  }
+  .link,
+  .link-current {
+    display: flex;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .link:hover, .link:focus,
+  .link-current:hover,
+  .link-current:focus {
+    color: var(--accent-color);
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mail-link {
+    margin-bottom: 0;
   }
 }
 

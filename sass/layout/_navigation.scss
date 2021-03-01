@@ -1,5 +1,17 @@
 /*Site nav*/
 /*MOBILE FIRST*/
+
+.logo {
+  @include font(24px, 700, 1.2);
+  display: block;
+  color: var(--primary-dark-color);
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  text-align: center;
+  align-items: center;
+  padding: 16px 0;
+}
 .burger-btn,
 .mobile-close-btn {
   background-color: transparent;
@@ -175,6 +187,13 @@
     height: 100%;
     cursor: pointer;
     align-items: center;
+    font-family: Roboto;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: #757575;
 
     &:hover,
     &:focus {
@@ -182,7 +201,18 @@
       cursor: pointer;
     }
   }
+  .link-header {
+    display: block;
+    color: #212121;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   .link-current {
+    padding: 32px 0;
     display: block;
     text-decoration: none;
     color: var(--accent-color);
@@ -217,6 +247,13 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    font-family: Roboto;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: #757575;
 
     &:hover,
     &:focus {
@@ -228,8 +265,58 @@
   .contacts-item {
     margin-left: auto;
   }
-}
 
+  .logo {
+    @include font(24px, 700, 1.2);
+    display: block;
+    color: var(--primary-dark-color);
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    text-align: center;
+    align-items: center;
+    padding: 26px 0;
+
+    &:hover {
+      color: var(--primary-dark-color);
+    }
+  }
+  .site-nav {
+    display: flex;
+    width: 294px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .site-nav-item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  .link-current,
+  .logo-accent {
+    color: var(--accent-color);
+  }
+
+  .link,
+  .link-current {
+    display: flex;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mail-link {
+    margin-bottom: 0;
+  }
+}
 //.site-nav {
 //  display: flex;
 //  width: 294px;

@@ -12,6 +12,42 @@
       url(../images/mobile-images/hero/hero@2x.jpg);
   }
 }*/
+
+.hero {
+  text-align: center;
+  background-color: var(--background-hero-color);
+}
+.overlay {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/mobile-images/hero/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/mobile-images/hero/hero@2x.jpg);
+  }
+}
+
+.hero-title {
+  width: 360px;
+  margin: 0 auto;
+  text-align: center;
+}
 .title {
   @include font(26px, 900, 1.62);
   color: var(--primary-lite-color);
@@ -21,51 +57,87 @@
   text-align: center;
   color: #ffffff;
 }
-.hero {
-  padding-top: 118px;
-  padding-bottom: 118px;
-  text-align: center;
-
-  background-color: var(--background-hero-color);
+@media screen and (min-width: 768px) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/tablet-images/hero/hero-tablet-img.jpg);
+  }
 }
-
-.hero-title {
-  width: 360px;
-  margin: 0 auto;
-  text-align: center;
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/tablet-images/hero/hero-tablet-img@2x.jpg);
+  }
 }
-
+@media screen and (min-width: 1200px) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/desktop-images/hero/hero-desktop-img.jpg);
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/desktop-images/hero/hero-desktop-img@2x.jpg);
+  }
+}
 @media screen and (min-width: 1200px) {
   .title {
     @include font(44px, 900, 1.36);
     letter-spacing: 0.06em;
   }
-
-  .hero-title {
-    width: 696px;
-    margin: 0 auto;
-  }
-  .overlay {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/Img-hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    text-align: center;
-
-    background-color: var(--background-hero-color);
-  }
 }
+.hero-title {
+  width: 696px;
+  margin: 0 auto;
+}
+/*.overlay {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Img-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/*.hero {
+  text-align: center;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Img-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--background-hero-color);
+}
+
 /*.overlay {
   height: 600px;
   max-width: 1600px;

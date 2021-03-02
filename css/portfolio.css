@@ -101,6 +101,7 @@ a {
 .hero .container {
   display: flex;
   align-items: center;
+  padding: 118px 30px;
 }
 
 @media screen and (min-width: 480px) {
@@ -118,6 +119,9 @@ a {
     display: flex;
     align-items: center;
   }
+  .hero .container {
+    padding: 118px 204px;
+  }
   .footer-page .container {
     display: flex;
     flex-direction: row;
@@ -134,6 +138,9 @@ a {
   .page-header .container {
     display: flex;
     align-items: center;
+  }
+  .hero .container {
+    padding: 200px 252px;
   }
   .footer-page .container {
     flex-wrap: nowrap;

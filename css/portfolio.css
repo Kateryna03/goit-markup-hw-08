@@ -79,8 +79,13 @@ a {
   text-decoration: none;
 }
 
-.img,
 .images {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -446,11 +451,16 @@ a {
   margin: -15px;
 }
 
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .flex-element {
   display: flex;
   margin: 15px;
   outline: 1px solid #eeeeee;
-  flex-basis: 354px;
 }
 
 .flex-element-link {
@@ -527,6 +537,9 @@ a {
   }
   .portfolio-div-tekst {
     width: 354px;
+  }
+  .flex-element {
+    flex-basis: 354px;
   }
 }
 
@@ -722,7 +735,12 @@ a {
 /*HEADER*/
 /*MOBILE FIRST*/
 .page-header {
-  background-color: powderblue;
+  /*position: fixed; ДЕЛАЕТ ФИКСИРОВАН ХЭДЕР*/
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-lite-color);
+  border-bottom: 1px solid #ececec;
 }
 
 /*tablet*/

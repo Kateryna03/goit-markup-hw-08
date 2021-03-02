@@ -2,7 +2,12 @@
 
 /*MOBILE FIRST*/
 .page-header {
-  background-color: powderblue;
+  /*position: fixed; ДЕЛАЕТ ФИКСИРОВАН ХЭДЕР*/
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-lite-color);
+  border-bottom: 1px solid #ececec;
 }
 
 @media screen and (max-width: 767px) {

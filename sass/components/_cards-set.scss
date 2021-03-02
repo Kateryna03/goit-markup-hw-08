@@ -4,12 +4,16 @@
   flex-wrap: wrap;
   margin: -15px;
 }
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 .flex-element {
   display: flex;
   margin: 15px;
   outline: 1px solid #eeeeee;
-  flex-basis: 354px;
 }
 .flex-element-link {
   display: inline-block;
@@ -84,6 +88,9 @@
   }
   .portfolio-div-tekst {
     width: 354px;
+  }
+  .flex-element {
+    flex-basis: 354px;
   }
 }
 /*desktop*/

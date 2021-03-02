@@ -28,8 +28,12 @@ a {
   text-decoration: none;
 }
 
-.img,
 .images {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.img {
   display: block;
   max-width: 100%;
   height: auto;

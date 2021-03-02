@@ -79,8 +79,13 @@ a {
   text-decoration: none;
 }
 
-.img,
 .images {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -433,7 +438,12 @@ a {
 /*HEADER*/
 /*MOBILE FIRST*/
 .page-header {
-  background-color: powderblue;
+  /*position: fixed; ДЕЛАЕТ ФИКСИРОВАН ХЭДЕР*/
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-lite-color);
+  border-bottom: 1px solid #ececec;
 }
 
 /*tablet*/

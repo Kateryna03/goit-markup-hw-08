@@ -85,7 +85,7 @@ a {
   height: auto;
 }
 
-.img {
+img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -451,7 +451,7 @@ a {
   margin: -15px;
 }
 
-.img {
+.portfolio-list-img {
   display: block;
   max-width: 100%;
   height: auto;

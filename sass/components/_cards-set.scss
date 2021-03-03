@@ -70,6 +70,7 @@
 .portfolio-div-tekst {
   padding: 20px 24px;
   text-align: left;
+  width: 100%;
 }
 
 .port {
@@ -97,6 +98,16 @@
 @media screen and (min-width: 1200px) {
   .portfolio-overlay {
     padding: 63px 24px;
+  }
+
+  .flex-element {
+    display: flex;
+    margin: 15px;
+    outline: 1px solid #eeeeee;
+    flex-basis: 370px;
+  }
+  .portfolio-div-tekst {
+    width: 370px;
   }
 }
 /*.portfolio-img-flex {

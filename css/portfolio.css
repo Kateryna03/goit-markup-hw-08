@@ -150,9 +150,6 @@ img {
   .footer-page .container {
     flex-wrap: nowrap;
   }
-  .team-section .container {
-    align-items: center;
-  }
 }
 
 /* raleway-regular - latin_cyrillic */

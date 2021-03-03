@@ -17,6 +17,7 @@
   background-color: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .mobile-close-btn {
@@ -29,12 +30,22 @@
   padding: 12px 8px;
   width: 40px;
   height: 40px;
+
+  .burger-btn:hover &,
+  .burger-btn:focus & {
+    fill: #2196f3;
+  }
 }
 
 .mobile-menu-close-icon {
   width: 40px;
   height: 40px;
   padding: 11px;
+
+  .mobile-close-btn:hover &,
+  .mobile-close-btn:focus & {
+    fill: #2196f3;
+  }
 }
 
 .mobile-menu {
@@ -77,6 +88,11 @@
   letter-spacing: 0.02em;
   color: #212121;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+&:hover,
+&:focus {
+  color: var(--accent-color);
+  cursor: pointer;
 }
 
 .link-current {

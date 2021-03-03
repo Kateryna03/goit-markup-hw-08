@@ -66,12 +66,19 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .advantages-section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   .section-title-list {
     display: flex;
     justify-content: space-between;
   }
   .section-title-li {
-    width: 270px;
+    max-width: 270px;
   }
 }
 

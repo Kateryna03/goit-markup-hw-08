@@ -439,7 +439,6 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--primary-lite-color);
   border-bottom: 1px solid #ececec;
 }
 
@@ -574,6 +573,7 @@ img {
   background-color: transparent;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 .mobile-close-btn {
@@ -588,10 +588,20 @@ img {
   height: 40px;
 }
 
+.burger-btn:hover .burger-icon,
+.burger-btn:focus .burger-icon {
+  fill: #2196f3;
+}
+
 .mobile-menu-close-icon {
   width: 40px;
   height: 40px;
   padding: 11px;
+}
+
+.mobile-close-btn:hover .mobile-menu-close-icon,
+.mobile-close-btn:focus .mobile-menu-close-icon {
+  fill: #2196f3;
 }
 
 .mobile-menu {
@@ -638,6 +648,11 @@ img {
   letter-spacing: 0.02em;
   color: #212121;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-link-header:hover, .mobile-link-header:focus {
+  color: var(--accent-color);
+  cursor: pointer;
 }
 
 .link-current {
@@ -856,6 +871,11 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .site-nav {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.17;
+  }
   .mail-link {
     margin-bottom: 0;
   }
@@ -1556,12 +1576,17 @@ img {
 
 @media screen and (min-width: 1200px) {
   .advantages-section {
+    max-width: 100%;
+    margin: 0 auto;
     padding-top: 94px;
     padding-bottom: 94px;
   }
   .section-title-list {
     display: flex;
     justify-content: space-between;
+  }
+  .section-title-li {
+    max-width: 270px;
   }
 }
 

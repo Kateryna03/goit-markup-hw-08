@@ -44,7 +44,6 @@
 }
 
 .hero-title {
-  width: 360px;
   margin: 0 auto;
   text-align: center;
 }
@@ -104,10 +103,9 @@
     @include font(44px, 900, 1.36);
     letter-spacing: 0.06em;
   }
-}
-.hero-title {
-  width: 696px;
-  margin: 0 auto;
+  .hero-title {
+    margin: 0 auto;
+  }
 }
 /*.overlay {
   max-width: 1600px;

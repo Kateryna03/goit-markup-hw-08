@@ -1,4 +1,4 @@
-@media skreen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .logo {
     @include font(24px, 700, 1.16);
     align-items: center;
@@ -33,11 +33,11 @@
     color: var(--accent-color);
   }
 }
-@media skreen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
 }
 /*Logo Tablet*/
 
-@media skreen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .logo {
     @include font(26px, 700, 1.2);
     align-items: center;

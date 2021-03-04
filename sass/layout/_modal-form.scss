@@ -80,7 +80,7 @@
   flex-direction: column;
 }
 .modal-title {
-  @include font(20px, 700, 1.5);
+  @include font(14px, 700, 1.5);
   letter-spacing: 0.03em;
   display: inline-block;
   margin-bottom: 12px;
